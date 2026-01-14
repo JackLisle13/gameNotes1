@@ -29,9 +29,12 @@ class GameScene: SKScene {
     }
     
     func jump(){
-        
-        var burst = SKAction.move(by: CGVector(dx: 0, dy: 200), duration: 1)
-        ball.run(burst)
+        if ball.physicsBody?.velocity.dy == 0{
+            //var burst = SKAction.move(by: CGVector(dx: 0, dy: 200), duration: 1)
+           //ball.run(burst)
+            ball.physicsBody?.velocity.dy = 20
+        }
+        else{return}
     }
         
     
