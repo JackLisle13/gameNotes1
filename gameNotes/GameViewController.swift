@@ -10,6 +10,8 @@ import SpriteKit
 import GameplayKit
 
 class GameViewController: UIViewController {
+    
+    var play : GameScene!
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -20,6 +22,7 @@ class GameViewController: UIViewController {
                 // Set the scale mode to scale to fit the window
                 scene.scaleMode = .aspectFill
                 
+                play = scene as? GameScene
                 // Present the scene
                 view.presentScene(scene)
             }
@@ -29,17 +32,26 @@ class GameViewController: UIViewController {
             view.showsFPS = true
             view.showsNodeCount = true
         }
+        let value = UIInterfaceOrientation.landscapeLeft.rawValue
+        UIDevice.current.setValue(value, forKey:"orientation")
     }
 
     override var supportedInterfaceOrientations: UIInterfaceOrientationMask {
-        if UIDevice.current.userInterfaceIdiom == .phone {
-            return .allButUpsideDown
-        } else {
-            return .all
-        }
+        return .landscapeRight
     }
 
     override var prefersStatusBarHidden: Bool {
         return true
     }
+    
+    
+    @IBAction func push(_ sender: Any) {
+        play.reset()
+
+    }
+    
+    @IBAction func jump(_ sender: Any) {
+        play.jump()
+    }
+    
 }
