@@ -11,10 +11,11 @@ import GameplayKit
 var ball : SKSpriteNode!
 let cam = SKCameraNode()
 
-class GameScene: SKScene {
+class GameScene: SKScene, SKPhysicsContactDelegate {
     
     
     override func didMove(to view: SKView) {
+        physicsWorld.contactDelegate = self
         ball = self.childNode(withName: "ball") as! SKSpriteNode
         self.camera = cam
     }
@@ -23,8 +24,17 @@ class GameScene: SKScene {
         cam.position = ball.position
     }
     
+    func didBegin(_ contact: SKPhysicsContact) {
+        if contact.bodyA.node?.name == "bad"{
+            reset()
+        }
+        else if contact.bodyA.node?.name == "good"{
+            print("horray!")
+        }
+    }
+    
     func reset(){
-        var respawn = SKAction.move(to: CGPoint(x: CGFloat.random(in: -320...320), y: 640), duration: 0)
+        var respawn = SKAction.move(to: CGPoint(x:-496, y:35), duration: 0)
         ball.run(respawn)
     }
     
@@ -36,7 +46,16 @@ class GameScene: SKScene {
         }
         else{return}
     }
+    
+    func up(){
+        var moveUp = SKAction.move(by: CGVector(dx: 0, dy: 20), duration: 0.1)
+        ball.run(moveUp)
+    }
         
+    func down(){
+        var moveDown = SKAction.move(by: CGVector(dx: 0, dy: -20), duration: 0.1)
+        ball.run(moveDown)
+    }
     
     
     

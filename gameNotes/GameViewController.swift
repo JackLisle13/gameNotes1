@@ -47,11 +47,18 @@ class GameViewController: UIViewController {
     
     @IBAction func push(_ sender: Any) {
         play.reset()
-
     }
     
-    @IBAction func jump(_ sender: Any) {
-        play.jump()
+//    @IBAction func jump(_ sender: Any) {
+//        play.jump()
+//    }
+    
+    
+    @IBAction func up(_ sender: Any) {
+        play.up()
     }
     
+    @IBAction func down(_ sender: Any) {
+        play.down()
+    }
 }
