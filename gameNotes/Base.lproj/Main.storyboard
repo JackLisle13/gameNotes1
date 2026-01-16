@@ -16,34 +16,43 @@
                         <rect key="frame" x="0.0" y="0.0" width="852" height="393"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="F6G-zp-Qhq">
-                                <rect key="frame" x="374" y="11" width="105" height="73"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WFY-wh-as9">
+                                <rect key="frame" x="79" y="295" width="102" height="51"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="Reset"/>
-                                <connections>
-                                    <action selector="push:" destination="BV1-FR-VrT" eventType="touchUpInside" id="c3t-yB-E1y"/>
-                                    <action selector="pushed:" destination="BV1-FR-VrT" eventType="touchUpInside" id="fDG-sK-KWV"/>
-                                </connections>
+                                <buttonConfiguration key="configuration" style="filled" title="DOWN"/>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Squ-7f-pWO">
-                                <rect key="frame" x="671" y="295" width="102" height="53"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="d4e-fe-AcW">
+                                <rect key="frame" x="671" y="295" width="102" height="51"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="UP"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EgQ-av-OIC">
+                                <rect key="frame" x="671" y="295" width="102" height="51"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="filled" title="UP"/>
                                 <connections>
-                                    <action selector="left:" destination="BV1-FR-VrT" eventType="touchUpInside" id="7ui-ep-gZr"/>
-                                    <action selector="up:" destination="BV1-FR-VrT" eventType="touchUpInside" id="N9f-gS-5rg"/>
+                                    <action selector="up:" destination="BV1-FR-VrT" eventType="touchUpInside" id="1dS-wr-lqF"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Tfz-Zj-vVd">
-                                <rect key="frame" x="79" y="295" width="100" height="53"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="40A-Sr-C8j">
+                                <rect key="frame" x="79" y="295" width="102" height="51"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="filled" title="DOWN"/>
                                 <connections>
-                                    <action selector="down:" destination="BV1-FR-VrT" eventType="touchUpInside" id="SKV-n9-EW0"/>
-                                    <action selector="right:" destination="BV1-FR-VrT" eventType="touchUpInside" id="Ebe-Zo-qOg"/>
+                                    <action selector="down:" destination="BV1-FR-VrT" eventType="touchUpInside" id="MtU-Gl-Ah4"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MWb-5a-gmX">
+                                <rect key="frame" x="380" y="16" width="93" height="35"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Respawn"/>
+                                <connections>
+                                    <action selector="push:" destination="BV1-FR-VrT" eventType="touchUpInside" id="Ci4-4b-0wz"/>
                                 </connections>
                             </button>
                         </subviews>

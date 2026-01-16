@@ -21,7 +21,9 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     }
     
     override func update(_ currentTime: TimeInterval) {
-        cam.position = ball.position
+        //cam.position = ball.position
+        cam.position.x = ball.position.x
+        cam.position.y = 300
     }
     
     func didBegin(_ contact: SKPhysicsContact) {
@@ -48,12 +50,12 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     }
     
     func up(){
-        var moveUp = SKAction.move(by: CGVector(dx: 0, dy: 20), duration: 0.1)
+        var moveUp = SKAction.move(by: CGVector(dx: 0, dy: 40), duration: 0.5)
         ball.run(moveUp)
     }
         
     func down(){
-        var moveDown = SKAction.move(by: CGVector(dx: 0, dy: -20), duration: 0.1)
+        var moveDown = SKAction.move(by: CGVector(dx: 0, dy: -40), duration: 0.5)
         ball.run(moveDown)
     }
     
